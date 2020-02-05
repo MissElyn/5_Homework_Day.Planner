@@ -1,7 +1,8 @@
+setInterval(function () {
+    $("#date").text(moment().format("MMMM DD, YYYY h:mm"));
+}, 1000 * 1)
 
-var date = moment();
-document.getElementById("date").innerHTML = date.format("MMMM DD, YYYY h:MM");
-console.log(date);
+//console.log(date);
 
 
 $("#t9").val(localStorage.getItem("task9"));
