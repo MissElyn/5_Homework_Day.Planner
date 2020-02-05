@@ -3,17 +3,30 @@ setInterval(function () {
 }, 1000 * 1)
 
 //console.log(date);
+function getClass(hour){
+    var now = moment()
+    var scheduledHour = moment().hour(hour)   
+    if(scheduledHour.isSame(now, 'hour')){
+        return 'present'
+    }
+    else if(scheduledHour.isAfter(now)){
+        return 'future'
+    }
+    else if(scheduledHour.isBefore(now)){
+        return 'past'
+    }
+}
 
+$("#t9").val(localStorage.getItem("task9")).addClass(getClass(9));
+$("#t10").val(localStorage.getItem("task10")).addClass(getClass(10));
+$("#t11").val(localStorage.getItem("task11")).addClass(getClass(11));
+$("#t12").val(localStorage.getItem("task12")).addClass(getClass(12));
+$("#t1").val(localStorage.getItem("task1")).addClass(getClass(13));
+$("#t2").val(localStorage.getItem("task2")).addClass(getClass(14));
+$("#t3").val(localStorage.getItem("task3")).addClass(getClass(15));
+$("#t4").val(localStorage.getItem("task4")).addClass(getClass(16));
+$("#t5").val(localStorage.getItem("task5")).addClass(getClass(17));
 
-$("#t9").val(localStorage.getItem("task9"));
-$("#t10").val(localStorage.getItem("task10"));
-$("#t11").val(localStorage.getItem("task11"));
-$("#t12").val(localStorage.getItem("task12"));
-$("#t1").val(localStorage.getItem("task1"));
-$("#t2").val(localStorage.getItem("task2"));
-$("#t3").val(localStorage.getItem("task3"));
-$("#t4").val(localStorage.getItem("task4"));
-$("#t5").val(localStorage.getItem("task5"));
 
 
 $("#save9").on("click",

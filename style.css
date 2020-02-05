@@ -29,5 +29,15 @@ h2 {
 
 }
 
+.past {
+    background-color: rgb(122, 122, 145);
+}
+
+.present {
+    background-color: peachpuff;
+}
+.future {
+    background-color: rgb(200, 212, 181);
+}
 
 
